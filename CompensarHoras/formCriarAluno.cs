@@ -14,9 +14,13 @@ namespace CompensarHoras
 {
     public partial class formCriarAluno : Form
     {
-        public formCriarAluno()
+        private Form1 form1;
+        public formCriarAluno(Form1 form1)
         {
             InitializeComponent();
+            this.form1 = form1;
+            cmbDisciplina.SelectedIndex = 0;
+            cmbTipo.SelectedIndex = 0;
         }
 
         private void txtNome_KeyPress(object sender, KeyPressEventArgs e)
@@ -66,8 +70,12 @@ namespace CompensarHoras
             Aluno aluno = new Aluno();
             aluno.Numero = int.Parse(txtNumero.Text);
             aluno.Nome = txtNome.Text;
-            
+            aluno.Turma = txtTurma.Text;
 
+            aluno.AddCompensar(aluno.ACompensar, (Disciplina)cmbDisciplina.SelectedIndex, cmbTipo.Text);
+            aluno.AddCompensar(aluno.ACompensar,int.Parse(txt);
+
+            form1.Alunos[form1.QuantidadeAlunos] = aluno;
         }
         
         private void txtSaldo_KeyPress(object sender, KeyPressEventArgs e)

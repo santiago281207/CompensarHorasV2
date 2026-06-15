@@ -15,8 +15,15 @@ namespace CompensarHoras
 
     public partial class Form1 : Form
     {
+        private int qtdAlunos = 0;
         Registos registos = new Registos();
         public Aluno[] Alunos = new Aluno[30];
+
+        public int QuantidadeAlunos
+        {
+            get { return qtdAlunos; }
+            set { qtdAlunos = value; }
+        }
 
 
         public Form1()
@@ -26,9 +33,8 @@ namespace CompensarHoras
 
         private void criarALunoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            formCriarAluno criarAluno = new formCriarAluno();
+            formCriarAluno criarAluno = new formCriarAluno(this);
             criarAluno.Show();
-
         }
 
         private void registrarHorasToolStripMenuItem_Click(object sender, EventArgs e)

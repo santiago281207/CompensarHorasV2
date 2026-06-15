@@ -34,7 +34,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="ClassesCompensar">
-      <HintPath>..\..\ClassesCompensar\ClassesCompensar\bin\Debug\ClassesCompensar.dll</HintPath>
+      <HintPath>..\..\ClassesCompensar\ClassesCompensar\bin\Release\ClassesCompensar.dll</HintPath>
     </Reference>
     <Reference Include="CompensarHoras, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
