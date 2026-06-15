@@ -34,7 +34,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="ClassesCompensar">
-      <HintPath>..\..\ClassesCompensar\ClassesCompensar\bin\Release\ClassesCompensar.dll</HintPath>
+      <HintPath>..\..\ClassesCompensar\ClassesCompensar\bin\Debug\ClassesCompensar.dll</HintPath>
     </Reference>
     <Reference Include="CompensarHoras, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -61,19 +61,37 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="formApagarAluno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formApagarAluno.Designer.cs">
+      <DependentUpon>formApagarAluno.cs</DependentUpon>
+    </Compile>
     <Compile Include="formCriarAluno.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="formCriarAluno.Designer.cs">
       <DependentUpon>formCriarAluno.cs</DependentUpon>
     </Compile>
+    <Compile Include="formRegistoCompensado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formRegistoCompensado.Designer.cs">
+      <DependentUpon>formRegistoCompensado.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="formApagarAluno.resx">
+      <DependentUpon>formApagarAluno.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="formCriarAluno.resx">
       <DependentUpon>formCriarAluno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formRegistoCompensado.resx">
+      <DependentUpon>formRegistoCompensado.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

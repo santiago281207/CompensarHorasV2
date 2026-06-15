@@ -16,6 +16,7 @@ namespace CompensarHoras
     public partial class Form1 : Form
     {
         Registos registos = new Registos();
+        public Aluno[] Alunos = new Aluno[30];
 
 
         public Form1()
@@ -48,12 +49,15 @@ namespace CompensarHoras
         //=================//
         private void apagarAlunoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            
+            formApagarAluno newForm = new formApagarAluno();
+            newForm.Show();
 
         }
 
         private void registoDeCompensaçãoDeHorasToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            formRegistoCompensado newForm = new formRegistoCompensado();
+            newForm.Show();
 
         }
 
