@@ -73,7 +73,7 @@ namespace CompensarHoras
             aluno.Turma = txtTurma.Text;
 
             aluno.AddCompensar(aluno.ACompensar, (Disciplina)cmbDisciplina.SelectedIndex, cmbTipo.Text);
-            aluno.AddCompensar(aluno.ACompensar,int.Parse(txt);
+            aluno.AddCompensar(aluno.ACompensar,int.Parse(cmbTrimestre.Text),txtAnoLetivo.Text,int.Parse(txtSaldo.Text));
 
             form1.Alunos[form1.QuantidadeAlunos] = aluno;
         }

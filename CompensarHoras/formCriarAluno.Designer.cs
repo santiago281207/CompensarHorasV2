@@ -53,13 +53,13 @@
             this.lblTurma = new System.Windows.Forms.Label();
             this.ttDicas = new System.Windows.Forms.ToolTip(this.components);
             this.cmbTipo = new System.Windows.Forms.ComboBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cmbTrimestre = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // txtNome
             // 
             this.txtNome.Location = new System.Drawing.Point(175, 41);
-            this.txtNome.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtNome.Margin = new System.Windows.Forms.Padding(4);
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(149, 22);
             this.txtNome.TabIndex = 0;
@@ -158,7 +158,7 @@
             // txtAnoLetivo
             // 
             this.txtAnoLetivo.Location = new System.Drawing.Point(333, 41);
-            this.txtAnoLetivo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtAnoLetivo.Margin = new System.Windows.Forms.Padding(4);
             this.txtAnoLetivo.MaxLength = 9;
             this.txtAnoLetivo.Name = "txtAnoLetivo";
             this.txtAnoLetivo.Size = new System.Drawing.Size(149, 22);
@@ -180,7 +180,7 @@
             "FQ",
             "SO"});
             this.cmbDisciplina.Location = new System.Drawing.Point(16, 100);
-            this.cmbDisciplina.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmbDisciplina.Margin = new System.Windows.Forms.Padding(4);
             this.cmbDisciplina.Name = "cmbDisciplina";
             this.cmbDisciplina.Size = new System.Drawing.Size(136, 24);
             this.cmbDisciplina.TabIndex = 13;
@@ -188,7 +188,7 @@
             // dtpData
             // 
             this.dtpData.Location = new System.Drawing.Point(337, 100);
-            this.dtpData.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dtpData.Margin = new System.Windows.Forms.Padding(4);
             this.dtpData.MaxDate = new System.DateTime(2100, 12, 31, 0, 0, 0, 0);
             this.dtpData.MinDate = new System.DateTime(2026, 6, 10, 0, 0, 0, 0);
             this.dtpData.Name = "dtpData";
@@ -199,7 +199,7 @@
             // 
             this.dtpHoraIncial.Format = System.Windows.Forms.DateTimePickerFormat.Time;
             this.dtpHoraIncial.Location = new System.Drawing.Point(16, 170);
-            this.dtpHoraIncial.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dtpHoraIncial.Margin = new System.Windows.Forms.Padding(4);
             this.dtpHoraIncial.MaxDate = new System.DateTime(2100, 12, 31, 0, 0, 0, 0);
             this.dtpHoraIncial.MinDate = new System.DateTime(2026, 6, 10, 0, 0, 0, 0);
             this.dtpHoraIncial.Name = "dtpHoraIncial";
@@ -211,7 +211,7 @@
             // 
             this.dtpHoraFinal.Format = System.Windows.Forms.DateTimePickerFormat.Time;
             this.dtpHoraFinal.Location = new System.Drawing.Point(211, 170);
-            this.dtpHoraFinal.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dtpHoraFinal.Margin = new System.Windows.Forms.Padding(4);
             this.dtpHoraFinal.MaxDate = new System.DateTime(2100, 12, 31, 0, 0, 0, 0);
             this.dtpHoraFinal.MinDate = new System.DateTime(2026, 6, 10, 0, 0, 0, 0);
             this.dtpHoraFinal.Name = "dtpHoraFinal";
@@ -222,7 +222,7 @@
             // txtSaldo
             // 
             this.txtSaldo.Location = new System.Drawing.Point(408, 170);
-            this.txtSaldo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtSaldo.Margin = new System.Windows.Forms.Padding(4);
             this.txtSaldo.Name = "txtSaldo";
             this.txtSaldo.Size = new System.Drawing.Size(113, 22);
             this.txtSaldo.TabIndex = 18;
@@ -242,7 +242,7 @@
             // txtNumero
             // 
             this.txtNumero.Location = new System.Drawing.Point(16, 41);
-            this.txtNumero.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtNumero.Margin = new System.Windows.Forms.Padding(4);
             this.txtNumero.MaxLength = 6;
             this.txtNumero.Name = "txtNumero";
             this.txtNumero.Size = new System.Drawing.Size(149, 22);
@@ -253,7 +253,7 @@
             // 
             this.btnEnviar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEnviar.Location = new System.Drawing.Point(16, 209);
-            this.btnEnviar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnEnviar.Margin = new System.Windows.Forms.Padding(4);
             this.btnEnviar.Name = "btnEnviar";
             this.btnEnviar.Size = new System.Drawing.Size(100, 38);
             this.btnEnviar.TabIndex = 21;
@@ -265,7 +265,7 @@
             // 
             this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelar.Location = new System.Drawing.Point(584, 201);
-            this.btnCancelar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCancelar.Margin = new System.Windows.Forms.Padding(4);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(100, 38);
             this.btnCancelar.TabIndex = 22;
@@ -276,7 +276,7 @@
             // txtTurma
             // 
             this.txtTurma.Location = new System.Drawing.Point(535, 100);
-            this.txtTurma.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtTurma.Margin = new System.Windows.Forms.Padding(4);
             this.txtTurma.MaxLength = 4;
             this.txtTurma.Name = "txtTurma";
             this.txtTurma.Size = new System.Drawing.Size(149, 22);
@@ -295,6 +295,7 @@
             // 
             // cmbTipo
             // 
+            this.cmbTipo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbTipo.FormattingEnabled = true;
             this.cmbTipo.Items.AddRange(new object[] {
             "PAIR",
@@ -304,20 +305,25 @@
             this.cmbTipo.Size = new System.Drawing.Size(150, 24);
             this.cmbTipo.TabIndex = 25;
             // 
-            // comboBox1
+            // cmbTrimestre
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(491, 41);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 24);
-            this.comboBox1.TabIndex = 26;
+            this.cmbTrimestre.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbTrimestre.FormattingEnabled = true;
+            this.cmbTrimestre.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3"});
+            this.cmbTrimestre.Location = new System.Drawing.Point(491, 41);
+            this.cmbTrimestre.Name = "cmbTrimestre";
+            this.cmbTrimestre.Size = new System.Drawing.Size(121, 24);
+            this.cmbTrimestre.TabIndex = 26;
             // 
             // formCriarAluno
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(701, 252);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.cmbTrimestre);
             this.Controls.Add(this.cmbTipo);
             this.Controls.Add(this.lblTurma);
             this.Controls.Add(this.txtTurma);
@@ -342,7 +348,7 @@
             this.Controls.Add(this.lblNome);
             this.Controls.Add(this.txtNome);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MinimizeBox = false;
             this.Name = "formCriarAluno";
             this.Text = "Criar Aluno";
@@ -377,6 +383,6 @@
         private System.Windows.Forms.TextBox txtTurma;
         private System.Windows.Forms.Label lblTurma;
         private System.Windows.Forms.ComboBox cmbTipo;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cmbTrimestre;
     }
 }
