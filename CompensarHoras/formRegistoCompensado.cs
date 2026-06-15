@@ -31,5 +31,29 @@ namespace CompensarHoras
         {
             e.Handled = !((e.KeyChar >= '0' && e.KeyChar <= '9') || e.KeyChar == 8);
         }
+
+        private void dtpHoraIni_ValueChanged(object sender, EventArgs e)
+        {
+            if (dtpHoraIni.Value.AddMinutes(30) > dtpHoraFinal.Value)
+            {
+                dtpHoraFinal.Value = dtpHoraIni.Value.AddMinutes(30);
+            }
+        }
+
+        private void dtpHoraFinal_ValueChanged(object sender, EventArgs e)
+        {
+            if (dtpHoraIni.Value.AddMinutes(30) > dtpHoraFinal.Value)
+            {
+                dtpHoraFinal.Value = dtpHoraIni.Value.AddMinutes(30);
+            }
+        }
+
+        private void dtpData_ValueChanged(object sender, EventArgs e)
+        {
+            if (dtpData.Value > DateTime.Now)
+            {
+                dtpData.Value = DateTime.Now;
+            }
+        }
     }
 }
