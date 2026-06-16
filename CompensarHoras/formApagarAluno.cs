@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CompensacaoHoras;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,19 +13,37 @@ namespace CompensarHoras
 {
     public partial class formApagarAluno : Form
     {
-        public formApagarAluno()
+        private Aluno alunoForm1;
+        private bool apagar = false;
+        public formApagarAluno(Aluno aluno)
         {
+            alunoForm1 = aluno;
             InitializeComponent();
         }
 
         private void btnApagar_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Tem serteza que quer apagar aluno?", "Apagar Aluno", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            DialogResult result = MessageBox.Show("Tem serteza que quer apagar aluno?", "Apagar Aluno", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            apagar = (result == DialogResult.Yes);
+            this.Close();
         }
 
         private void formApagarAluno_Load(object sender, EventArgs e)
         {
-            
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+        public bool Apagar
+        {
+            get { return apagar; }
+        }
+
+        private void lblNum_Click(object sender, EventArgs e)
+        {
+
         }
     }
-}
+}   

@@ -17,12 +17,24 @@ namespace CompensarHoras
     {
         Registos registos = new Registos();
         public Aluno[] Alunos = new Aluno[30];
+        
+        public int QuantidadeAlunos
+        {
+            get { return qtdAlunos; }
+            set { qtdAlunos = value; }
+        }
 
 
         public Form1()
         {
+            Alunos[0] = new Aluno();
+            Alunos[0].Nome = "Aluno1";
+            Alunos[0].Numero = 123456;
+            Alunos[0].Turma = "Tgpsi";
             InitializeComponent();
         }
+
+
 
         private void criarALunoToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -49,15 +61,25 @@ namespace CompensarHoras
         //=================//
         private void apagarAlunoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            formApagarAluno newForm = new formApagarAluno();
-            newForm.Show();
-
+            int i = Form1OneSelectedItem;
+            if(i == -1) 
+            {
+                MessageBox.Show("Deve selecionar so um aluno.", "Apagar Aluno", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            formApagarAluno novoForm = new formApagarAluno(Alunos[i]);
+            novoForm.ShowDialog();
+            if (novoForm.Apagar)
+            {
+                lvwAlunos.Items.RemoveAt(Form1OneSelectedItem);
+            }
+            novoForm.Dispose();
         }
 
         private void registoDeCompensaçãoDeHorasToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            formRegistoCompensado newForm = new formRegistoCompensado();
-            newForm.Show();
+            formRegistoCompensado newForm = new formRegistoCompensado(Alunos);
+            newForm.ShowDialog();
 
         }
 
@@ -69,6 +91,37 @@ namespace CompensarHoras
         private void mostrarAInformaçãoDeUmAlunoToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
+        }
+
+
+        public ListViewItem Form1ListviewItem
+        {
+            get { return (ListViewItem)lvwAlunos.FocusedItem.Clone(); }
+        }
+
+        public int Form1OneSelectedItem
+        {
+            get
+            {
+                if(lvwAlunos.SelectedItems.Count != 1)
+                {
+                    return -1;
+                }
+                else
+                {
+                    return lvwAlunos.SelectedIndices[0];
+                }
+            }
+        }
+
+        public void AtualizarListView()
+        {
+            lvwAlunos.Items.Clear();
+            for(int i=0;i < qtdAlunos;i++)
+            {
+                ListViewItem item = new ListViewItem();
+                item.Text = registos.Alunos[0].Nome;
+            }
         }
     }
 }

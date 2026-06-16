@@ -30,6 +30,16 @@
         {
             System.Windows.Forms.ListViewGroup listViewGroup1 = new System.Windows.Forms.ListViewGroup("ListViewGroup", System.Windows.Forms.HorizontalAlignment.Left);
             System.Windows.Forms.ListViewGroup listViewGroup2 = new System.Windows.Forms.ListViewGroup("ListViewGroup", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem(new string[] {
+            "Aluno",
+            "123456",
+            "1",
+            "PSI",
+            "PAIR",
+            "1/1/2026",
+            "8:30",
+            "9:30",
+            "20$"}, -1);
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.lvwAlunos = new System.Windows.Forms.ListView();
             this.chNome = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -59,9 +69,8 @@
             // 
             // lvwAlunos
             // 
-            this.lvwAlunos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lvwAlunos.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.lvwAlunos.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.chNome,
             this.chAnoLetivo,
@@ -80,10 +89,12 @@
             listViewGroup1,
             listViewGroup2});
             this.lvwAlunos.HideSelection = false;
+            this.lvwAlunos.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
+            listViewItem1});
             this.lvwAlunos.Location = new System.Drawing.Point(16, 58);
             this.lvwAlunos.Margin = new System.Windows.Forms.Padding(2);
             this.lvwAlunos.Name = "lvwAlunos";
-            this.lvwAlunos.Size = new System.Drawing.Size(706, 289);
+            this.lvwAlunos.Size = new System.Drawing.Size(846, 289);
             this.lvwAlunos.TabIndex = 0;
             this.lvwAlunos.UseCompatibleStateImageBehavior = false;
             this.lvwAlunos.View = System.Windows.Forms.View.Details;
@@ -142,7 +153,7 @@
             this.msMenu.Location = new System.Drawing.Point(0, 0);
             this.msMenu.Name = "msMenu";
             this.msMenu.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
-            this.msMenu.Size = new System.Drawing.Size(730, 24);
+            this.msMenu.Size = new System.Drawing.Size(878, 24);
             this.msMenu.TabIndex = 1;
             this.msMenu.Text = "Menu";
             // 
@@ -242,7 +253,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(730, 366);
+            this.ClientSize = new System.Drawing.Size(878, 366);
             this.Controls.Add(this.lvwAlunos);
             this.Controls.Add(this.msMenu);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CompensacaoHoras;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,20 +13,39 @@ namespace CompensarHoras
 {
     public partial class formRegistoCompensado : Form
     {
-        public formRegistoCompensado()
+        private Aluno[] Form1Alunos;
+        public formRegistoCompensado(Aluno[] alunos)
         {
+            Form1Alunos = alunos;
             InitializeComponent();
         }
 
         private void formRegistoCompensado_Load(object sender, EventArgs e)
         {
-
+            dtpAno.CustomFormat = $"{dtpAno.Value.Year - 1}/yyyy";
+            ccbDisp.SelectedIndex = 0;
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-
-        }
+            if (txtNum.Text.Length == 6)
+            {
+                foreach (Aluno aln in Form1Alunos)
+                {
+                    if (txtNum.Text == aln.Numero.ToString())
+                    {
+                        lblNome.Text = aln.Nome;
+                        break;
+                    }
+                }
+                lblNome.Text = "Aluno com este numero nao existe!";
+            }
+            else
+            {   
+                lblNome.Text = "-----";
+            }
+         }
+        
 
         private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -45,6 +65,7 @@ namespace CompensarHoras
             if (dtpHoraIni.Value.AddMinutes(30) > dtpHoraFinal.Value)
             {
                 dtpHoraFinal.Value = dtpHoraIni.Value.AddMinutes(30);
+                System.Media.SystemSounds.Exclamation.Play();
             }
         }
 
@@ -53,7 +74,13 @@ namespace CompensarHoras
             if (dtpData.Value > DateTime.Now)
             {
                 dtpData.Value = DateTime.Now;
+                System.Media.SystemSounds.Exclamation.Play();
             }
+        }
+
+        private void dtpAno_ValueChanged(object sender, EventArgs e)
+        {
+            dtpAno.CustomFormat = $"{dtpAno.Value.Year - 1}/yyyy";
         }
     }
 }
