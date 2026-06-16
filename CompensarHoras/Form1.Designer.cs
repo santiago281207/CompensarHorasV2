@@ -258,8 +258,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.ListView lvwAlunos;
         private System.Windows.Forms.ColumnHeader chNome;
         private System.Windows.Forms.ColumnHeader chAnoLetivo;
         private System.Windows.Forms.ColumnHeader chTrimestre;
@@ -282,6 +280,7 @@
         private System.Windows.Forms.ToolStripMenuItem mnuTotalAnoLetivo;
         private System.Windows.Forms.ToolStripMenuItem mnuInfoTodosAlunos;
         private System.Windows.Forms.ToolStripMenuItem mnuInfoAluno;
+        private System.Windows.Forms.ListView lvwAlunos;
     }
 }
 
