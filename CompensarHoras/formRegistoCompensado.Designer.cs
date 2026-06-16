@@ -56,10 +56,11 @@
             // 
             // txtNum
             // 
-            this.txtNum.Location = new System.Drawing.Point(12, 28);
+            this.txtNum.Location = new System.Drawing.Point(9, 23);
+            this.txtNum.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtNum.MaxLength = 6;
             this.txtNum.Name = "txtNum";
-            this.txtNum.Size = new System.Drawing.Size(69, 22);
+            this.txtNum.Size = new System.Drawing.Size(53, 20);
             this.txtNum.TabIndex = 0;
             this.txtNum.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txtNum.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
@@ -72,9 +73,11 @@
             this.gpbAno.Controls.Add(this.tdbTr2);
             this.gpbAno.Controls.Add(this.dtpAno);
             this.gpbAno.Controls.Add(this.rdbTr1);
-            this.gpbAno.Location = new System.Drawing.Point(15, 124);
+            this.gpbAno.Location = new System.Drawing.Point(11, 101);
+            this.gpbAno.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.gpbAno.Name = "gpbAno";
-            this.gpbAno.Size = new System.Drawing.Size(116, 169);
+            this.gpbAno.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gpbAno.Size = new System.Drawing.Size(87, 137);
             this.gpbAno.TabIndex = 3;
             this.gpbAno.TabStop = false;
             this.gpbAno.Text = "Ano Letivo";
@@ -82,18 +85,20 @@
             // lblTrim
             // 
             this.lblTrim.AutoSize = true;
-            this.lblTrim.Location = new System.Drawing.Point(6, 62);
+            this.lblTrim.Location = new System.Drawing.Point(4, 50);
+            this.lblTrim.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblTrim.Name = "lblTrim";
-            this.lblTrim.Size = new System.Drawing.Size(64, 16);
+            this.lblTrim.Size = new System.Drawing.Size(50, 13);
             this.lblTrim.TabIndex = 8;
             this.lblTrim.Text = "Trimestre";
             // 
             // rdbTr3
             // 
             this.rdbTr3.AutoSize = true;
-            this.rdbTr3.Location = new System.Drawing.Point(6, 137);
+            this.rdbTr3.Location = new System.Drawing.Point(4, 111);
+            this.rdbTr3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.rdbTr3.Name = "rdbTr3";
-            this.rdbTr3.Size = new System.Drawing.Size(100, 20);
+            this.rdbTr3.Size = new System.Drawing.Size(81, 17);
             this.rdbTr3.TabIndex = 10;
             this.rdbTr3.Text = "3º Trimestre";
             this.rdbTr3.UseVisualStyleBackColor = true;
@@ -101,9 +106,10 @@
             // tdbTr2
             // 
             this.tdbTr2.AutoSize = true;
-            this.tdbTr2.Location = new System.Drawing.Point(6, 111);
+            this.tdbTr2.Location = new System.Drawing.Point(4, 90);
+            this.tdbTr2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tdbTr2.Name = "tdbTr2";
-            this.tdbTr2.Size = new System.Drawing.Size(100, 20);
+            this.tdbTr2.Size = new System.Drawing.Size(81, 17);
             this.tdbTr2.TabIndex = 9;
             this.tdbTr2.Text = "2º Trimestre";
             this.tdbTr2.UseVisualStyleBackColor = true;
@@ -112,19 +118,21 @@
             // 
             this.dtpAno.CustomFormat = "yyyy";
             this.dtpAno.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpAno.Location = new System.Drawing.Point(6, 21);
+            this.dtpAno.Location = new System.Drawing.Point(4, 17);
+            this.dtpAno.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dtpAno.Name = "dtpAno";
             this.dtpAno.ShowUpDown = true;
-            this.dtpAno.Size = new System.Drawing.Size(93, 22);
+            this.dtpAno.Size = new System.Drawing.Size(71, 20);
             this.dtpAno.TabIndex = 8;
             // 
             // rdbTr1
             // 
             this.rdbTr1.AutoSize = true;
             this.rdbTr1.Checked = true;
-            this.rdbTr1.Location = new System.Drawing.Point(6, 85);
+            this.rdbTr1.Location = new System.Drawing.Point(4, 69);
+            this.rdbTr1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.rdbTr1.Name = "rdbTr1";
-            this.rdbTr1.Size = new System.Drawing.Size(100, 20);
+            this.rdbTr1.Size = new System.Drawing.Size(81, 17);
             this.rdbTr1.TabIndex = 0;
             this.rdbTr1.TabStop = true;
             this.rdbTr1.Text = "1º Trimestre";
@@ -133,26 +141,30 @@
             // dtpData
             // 
             this.dtpData.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpData.Location = new System.Drawing.Point(137, 94);
+            this.dtpData.Location = new System.Drawing.Point(103, 76);
+            this.dtpData.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dtpData.Name = "dtpData";
-            this.dtpData.Size = new System.Drawing.Size(116, 22);
+            this.dtpData.Size = new System.Drawing.Size(88, 20);
             this.dtpData.TabIndex = 1;
+            this.dtpData.ValueChanged += new System.EventHandler(this.dtpData_ValueChanged);
             // 
             // lblNum
             // 
             this.lblNum.AutoSize = true;
-            this.lblNum.Location = new System.Drawing.Point(12, 9);
+            this.lblNum.Location = new System.Drawing.Point(9, 7);
+            this.lblNum.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblNum.Name = "lblNum";
-            this.lblNum.Size = new System.Drawing.Size(55, 16);
+            this.lblNum.Size = new System.Drawing.Size(44, 13);
             this.lblNum.TabIndex = 4;
             this.lblNum.Text = "Número";
             // 
             // lblNome
             // 
             this.lblNome.AutoSize = true;
-            this.lblNome.Location = new System.Drawing.Point(87, 31);
+            this.lblNome.Location = new System.Drawing.Point(65, 25);
+            this.lblNome.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblNome.Name = "lblNome";
-            this.lblNome.Size = new System.Drawing.Size(27, 16);
+            this.lblNome.Size = new System.Drawing.Size(22, 13);
             this.lblNome.TabIndex = 5;
             this.lblNome.Text = "-----";
             // 
@@ -169,17 +181,19 @@
             " TIC",
             " FQ",
             " SO"});
-            this.ccbDisp.Location = new System.Drawing.Point(15, 94);
+            this.ccbDisp.Location = new System.Drawing.Point(11, 76);
+            this.ccbDisp.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.ccbDisp.Name = "ccbDisp";
-            this.ccbDisp.Size = new System.Drawing.Size(116, 24);
+            this.ccbDisp.Size = new System.Drawing.Size(88, 21);
             this.ccbDisp.TabIndex = 6;
             // 
             // lblDisp
             // 
             this.lblDisp.AutoSize = true;
-            this.lblDisp.Location = new System.Drawing.Point(12, 75);
+            this.lblDisp.Location = new System.Drawing.Point(9, 61);
+            this.lblDisp.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblDisp.Name = "lblDisp";
-            this.lblDisp.Size = new System.Drawing.Size(66, 16);
+            this.lblDisp.Size = new System.Drawing.Size(52, 13);
             this.lblDisp.TabIndex = 7;
             this.lblDisp.Text = "Disciplina";
             // 
@@ -187,9 +201,11 @@
             // 
             this.gpbTipo.Controls.Add(this.rdbPAIR);
             this.gpbTipo.Controls.Add(this.rdbNormal);
-            this.gpbTipo.Location = new System.Drawing.Point(137, 124);
+            this.gpbTipo.Location = new System.Drawing.Point(103, 101);
+            this.gpbTipo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.gpbTipo.Name = "gpbTipo";
-            this.gpbTipo.Size = new System.Drawing.Size(161, 55);
+            this.gpbTipo.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gpbTipo.Size = new System.Drawing.Size(121, 45);
             this.gpbTipo.TabIndex = 11;
             this.gpbTipo.TabStop = false;
             this.gpbTipo.Text = "Tipo";
@@ -197,9 +213,10 @@
             // rdbPAIR
             // 
             this.rdbPAIR.AutoSize = true;
-            this.rdbPAIR.Location = new System.Drawing.Point(84, 24);
+            this.rdbPAIR.Location = new System.Drawing.Point(63, 20);
+            this.rdbPAIR.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.rdbPAIR.Name = "rdbPAIR";
-            this.rdbPAIR.Size = new System.Drawing.Size(59, 20);
+            this.rdbPAIR.Size = new System.Drawing.Size(50, 17);
             this.rdbPAIR.TabIndex = 9;
             this.rdbPAIR.Text = "PAIR";
             this.rdbPAIR.UseVisualStyleBackColor = true;
@@ -208,9 +225,10 @@
             // 
             this.rdbNormal.AutoSize = true;
             this.rdbNormal.Checked = true;
-            this.rdbNormal.Location = new System.Drawing.Point(6, 24);
+            this.rdbNormal.Location = new System.Drawing.Point(4, 20);
+            this.rdbNormal.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.rdbNormal.Name = "rdbNormal";
-            this.rdbNormal.Size = new System.Drawing.Size(72, 20);
+            this.rdbNormal.Size = new System.Drawing.Size(58, 17);
             this.rdbNormal.TabIndex = 0;
             this.rdbNormal.TabStop = true;
             this.rdbNormal.Text = "Normal";
@@ -220,28 +238,32 @@
             // 
             this.dtpHoraIni.CustomFormat = "HH:mm";
             this.dtpHoraIni.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpHoraIni.Location = new System.Drawing.Point(143, 208);
+            this.dtpHoraIni.Location = new System.Drawing.Point(107, 169);
+            this.dtpHoraIni.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dtpHoraIni.Name = "dtpHoraIni";
             this.dtpHoraIni.ShowUpDown = true;
-            this.dtpHoraIni.Size = new System.Drawing.Size(77, 22);
+            this.dtpHoraIni.Size = new System.Drawing.Size(59, 20);
             this.dtpHoraIni.TabIndex = 12;
             this.dtpHoraIni.Value = new System.DateTime(2026, 6, 12, 8, 0, 0, 0);
+            this.dtpHoraIni.ValueChanged += new System.EventHandler(this.dtpHoraIni_ValueChanged);
             // 
             // lblHoraIni
             // 
             this.lblHoraIni.AutoSize = true;
-            this.lblHoraIni.Location = new System.Drawing.Point(140, 186);
+            this.lblHoraIni.Location = new System.Drawing.Point(105, 151);
+            this.lblHoraIni.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblHoraIni.Name = "lblHoraIni";
-            this.lblHoraIni.Size = new System.Drawing.Size(74, 16);
+            this.lblHoraIni.Size = new System.Drawing.Size(59, 13);
             this.lblHoraIni.TabIndex = 11;
             this.lblHoraIni.Text = "Hora inicial";
             // 
             // lblHoraFinal
             // 
             this.lblHoraFinal.AutoSize = true;
-            this.lblHoraFinal.Location = new System.Drawing.Point(234, 186);
+            this.lblHoraFinal.Location = new System.Drawing.Point(176, 151);
+            this.lblHoraFinal.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblHoraFinal.Name = "lblHoraFinal";
-            this.lblHoraFinal.Size = new System.Drawing.Size(64, 16);
+            this.lblHoraFinal.Size = new System.Drawing.Size(52, 13);
             this.lblHoraFinal.TabIndex = 14;
             this.lblHoraFinal.Text = "Hora final";
             // 
@@ -249,45 +271,50 @@
             // 
             this.dtpHoraFinal.CustomFormat = "HH:mm";
             this.dtpHoraFinal.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpHoraFinal.Location = new System.Drawing.Point(237, 208);
+            this.dtpHoraFinal.Location = new System.Drawing.Point(178, 169);
+            this.dtpHoraFinal.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dtpHoraFinal.Name = "dtpHoraFinal";
             this.dtpHoraFinal.ShowUpDown = true;
-            this.dtpHoraFinal.Size = new System.Drawing.Size(77, 22);
+            this.dtpHoraFinal.Size = new System.Drawing.Size(59, 20);
             this.dtpHoraFinal.TabIndex = 15;
             this.dtpHoraFinal.Value = new System.DateTime(2026, 6, 12, 8, 30, 0, 0);
+            this.dtpHoraFinal.ValueChanged += new System.EventHandler(this.dtpHoraFinal_ValueChanged);
             // 
             // lblData
             // 
             this.lblData.AutoSize = true;
-            this.lblData.Location = new System.Drawing.Point(134, 75);
+            this.lblData.Location = new System.Drawing.Point(100, 61);
+            this.lblData.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblData.Name = "lblData";
-            this.lblData.Size = new System.Drawing.Size(36, 16);
+            this.lblData.Size = new System.Drawing.Size(30, 13);
             this.lblData.TabIndex = 16;
             this.lblData.Text = "Data";
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(156, 274);
+            this.btnCancelar.Location = new System.Drawing.Point(117, 223);
+            this.btnCancelar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(75, 23);
+            this.btnCancelar.Size = new System.Drawing.Size(56, 19);
             this.btnCancelar.TabIndex = 17;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
             // 
             // btnConf
             // 
-            this.btnConf.Location = new System.Drawing.Point(237, 274);
+            this.btnConf.Location = new System.Drawing.Point(178, 223);
+            this.btnConf.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnConf.Name = "btnConf";
-            this.btnConf.Size = new System.Drawing.Size(75, 23);
+            this.btnConf.Size = new System.Drawing.Size(56, 19);
             this.btnConf.TabIndex = 18;
             this.btnConf.Text = "Confirmar";
             this.btnConf.UseVisualStyleBackColor = true;
             // 
             // formRegistoCompensado
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(330, 309);
+            this.ClientSize = new System.Drawing.Size(248, 251);
             this.Controls.Add(this.btnConf);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.lblData);
@@ -303,6 +330,7 @@
             this.Controls.Add(this.dtpData);
             this.Controls.Add(this.gpbAno);
             this.Controls.Add(this.txtNum);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "formRegistoCompensado";
             this.Text = "formRegistoCompensado";
             this.Load += new System.EventHandler(this.formRegistoCompensado_Load);
