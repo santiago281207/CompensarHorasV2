@@ -15,13 +15,12 @@ namespace CompensarHoras
     public partial class formCriarAluno : Form
     {
         private Form1 form1;
-        private Registos registos;
-
-        public formCriarAluno(Form1 form1,Registos registos)
+        public formCriarAluno(Form1 form1)
         {
             InitializeComponent();
             this.form1 = form1;
-            this.registos = registos;
+            cmbDisciplina.SelectedIndex = 0;
+            cmbTipo.SelectedIndex = 0;
         }
 
         private void txtNome_KeyPress(object sender, KeyPressEventArgs e)
@@ -70,31 +69,12 @@ namespace CompensarHoras
 
             Aluno aluno = new Aluno();
             aluno.Nome = txtNome.Text;
-            aluno.Numero = int.Parse(txtNumero.Text);
             aluno.Turma = txtTurma.Text;
 
-            int state = registos.Add(aluno);
-            
-            if(state == 0)
-            {
-                MessageBox.Show("Quantidade máxima de alunos atingida!", "Erro inserção", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }else if(state == -1)
-            {
-                MessageBox.Show("Aluno já existente no sistema", "Erro inserção", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }else
-            {
-                foreach (Control c in this.Controls)
-                {
-                    if (c is TextBox)
-                    {
-                        c.Text = "";
-                    }  
-                }
-                
-            }
+            aluno.AddCompensar(aluno.ACompensar, (Disciplina)cmbDisciplina.SelectedIndex, cmbTipo.Text);
+            aluno.AddCompensar(aluno.ACompensar,int.Parse(cmbTrimestre.Text),txtAnoLetivo.Text,int.Parse(txtSaldo.Text));
 
-            MessageBox.Show($"Aluno {aluno.Nome} adicionado com sucesso!", "Aluno adicionado com sucesso!", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            this.Close();
+            form1.Alunos[form1.QuantidadeAlunos] = aluno;
         }
         
         
