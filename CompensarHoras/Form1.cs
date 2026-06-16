@@ -11,7 +11,6 @@ using System.Windows.Forms;
 
 namespace CompensarHoras
 {
-    
 
     public partial class Form1 : Form
     {
@@ -29,6 +28,12 @@ namespace CompensarHoras
         public Form1()
         {
             InitializeComponent();
+            
+        }
+
+        public void AddLvwItem(ListViewItem lvi)
+        {
+            lvwAlunos.Items.Add(lvi);
         }
 
         private void criarALunoToolStripMenuItem_Click(object sender, EventArgs e)
@@ -39,12 +44,13 @@ namespace CompensarHoras
 
         private void registrarHorasToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            formRegistarHorasCompensar formRegistarHorasCompensar = new formRegistarHorasCompensar(this, registos);
+            formRegistarHorasCompensar.ShowDialog();
         }
 
         private void totalHorasAlunoACompensarToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            
         }
 
         private void mostrarAInformaçãoDeTodosOsAlunosToolStripMenuItem_Click(object sender, EventArgs e)
@@ -76,5 +82,7 @@ namespace CompensarHoras
         {
 
         }
+
+
     }
 }

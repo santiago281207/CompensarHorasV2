@@ -68,7 +68,6 @@ namespace CompensarHoras
             }
 
             Aluno aluno = new Aluno();
-            aluno.Numero = int.Parse(txtNumero.Text);
             aluno.Nome = txtNome.Text;
             aluno.Turma = txtTurma.Text;
 
@@ -77,6 +76,7 @@ namespace CompensarHoras
 
             form1.Alunos[form1.QuantidadeAlunos] = aluno;
         }
+        
         
         private void txtSaldo_KeyPress(object sender, KeyPressEventArgs e)
         {
